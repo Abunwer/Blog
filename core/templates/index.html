@@ -1,0 +1,53 @@
+{% load static %}
+{% include 'header.html' %}
+
+    <!-- Page Header -->
+    <header class="masthead" style="background-image: url('{% static 'img/home-bg.jpg' %}')">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="site-heading">
+              <h1>Clean Blog</h1>
+              <span class="subheading">A Blog Theme by Start Bootstrap</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+        {% if posts %}
+          {% for post in posts %}
+            <div class="post-preview">
+              <a href="{% url 'post' post.id %}">
+                <h2 class="post-title">
+                  {{post.title}}
+                <h2>
+                <h3 class="post-subtitle">
+                  {{post.sub_title}}
+                </h3>
+              </a>
+              <p class="post-meta">
+                Posted By <a href="#"> {{post.arthor_name}}</a> 
+                On {{post.create_at}}
+              </p>
+            </div>
+            <hr>
+          {% endfor %}
+        {% else %}
+           <p> No posts here </p>
+        {% endif %}
+          <div class="clearfix">
+            <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    {% include 'footer.html' %}

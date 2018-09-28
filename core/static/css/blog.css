@@ -1,0 +1,50 @@
+/********* header ************/
+.page-header {
+    background-color: whitesmoke;
+}
+.page-header .header {
+    width: 80%;
+    margin: auto;
+    height: 20%;
+}
+
+.header .logo {
+
+    float: left;
+
+}
+.menu {
+
+    width: 40%;
+    margin: auto;
+    padding-top: 14px;
+    text-align: center;
+
+}
+.menu ul {
+    margin: auto;
+    padding: 0px;
+
+}
+.menu ul li {
+
+    display: inline-block;
+
+}
+
+.menu ul li a {
+
+    text-decoration: none;
+    padding: 10px;
+    color: currentColor;
+    transition-duration: 0.5s;
+
+}
+.menu ul li a:hover {
+
+    color: white;
+	background: black;
+	border-radius: 20px;
+	transition-duration: 0.1	s;
+
+}
